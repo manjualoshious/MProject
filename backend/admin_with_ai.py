@@ -22,8 +22,9 @@ st.set_page_config(
 # MONGODB CONNECTION
 # =========================================================
 
-MONGO_URL = "mongodb://localhost:27017"
-API_URL = "http://127.0.0.1:8000"
+MONGO_URL = "mongodb+srv://Manju123:Manju123@cluster0.q2agwan.mongodb.net/?appName=Cluster0"
+#API_URL = "http://127.0.0.1:8000"
+API_URL = "https://mproject-knzg.onrender.com"
 
 try:
     client = MongoClient(
@@ -33,9 +34,9 @@ try:
 
     client.server_info()
 
-    db = client["ai_organization"]
+    db = client["ai_orchestration"]
 
-    users_collection = db["users"]
+    users_collection = db["userslist"]
     employees_collection = db["employees"]
     roles_collection = db["roles"]
     departments_collection = db["departments"]
